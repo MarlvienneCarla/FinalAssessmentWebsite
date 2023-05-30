@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for the icon beside the title -->
+    <link rel="shortcut icon" href="../images/m.png" type="image/x-icon">
+    <!-- this cloudflare is for the font icons that i will use from font awesome website  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- i use separate css file for navigation bar to link it to the different html -->
+    <!-- separate css file for in general -->
+    <!-- style css is for the home page -->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/sign in.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <title>Sign In Motiminder</title>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="brand">
+                <img src="../images/v914-ning-27.jpg" alt="logo">
+                <a href="/index.html">Motiminder</a>
+            </div>
+            <!-- when the nav bar goes responsive -->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <ul>
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="../pages/quotes.html">Lists</a></li>
+                <li><a href="../pages/sign in.html">Sign in</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="login">
+            <h1>Sign In</h1>
+            <form action="">
+                <div class="item">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+                </div>
+                <div class="item">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="item">
+                    <input type="checkbox" name="me" id="me">
+                    <label for="me">Remember Me</label>
+                </div>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+    </section>
+    <div class="copyright">
+        &copy; All rights reserved by Motiminder 2023
+    </div>
+    <script src="../scipt/navbar.js"></script>
+</body>
+
+</html>

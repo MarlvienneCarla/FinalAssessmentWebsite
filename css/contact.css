@@ -1,0 +1,123 @@
+/* this is for the whole page/parts */
+.main-contact {
+    background: url(../images/clark-tibbs-oqStl2L5oxI-unsplash.jpg); /*background image url*/
+    background-size: cover; /*makes the backgroudn image cover the entire section*/
+    color: white; /*text color*/
+    min-height: 100vh; /*minimum height of the section to fill in viewport*/
+}
+
+/* to arrange/center the text */
+.main-text {
+    position: absolute;  /*sets the postion to absolute*/
+    top: 50%; /*postion the text 50% from top*/
+    left: 50%; /*postion the text 50% from left*/
+    transform: translate(-50%,-50%);  /*center the text using transform*/
+    padding: 16px; /*padding around it*/
+    min-width: 75%; /*minimum width of the text*/
+    text-align: center; /*centers the text horizonatally*/
+}
+
+/* for the heading h1 within the main text */
+.main-text h1 {
+    font-size: 64px; /*font size of the heading*/
+}
+
+/* for underlined and bold text within the main text */
+span {
+    text-decoration: underline;/*underlines text*/
+    font-weight: bold;/*make the text bold*/
+}
+
+/* for paragraph within main text */
+.main-text p {
+    font-size: 24px;/*font size of the paragraph*/
+    margin: 16px 0 32px 0;/*margin around the paragraph*/
+    color: black;/*text color*/
+    background-color: rgba(255, 255, 255, 0.835);/*background color with opacity or what we called gradient*/
+    border-radius: 10px;/*border radius for sounded corners*/
+    padding: 16px 10px 16px 10px;/*padding around the paragraphs*/
+}
+
+/* for links within main text */
+.main-text a {
+    text-decoration: none; /*removes underline from links*/
+    color: white;/*text color*/
+    padding: 10px 25px;/*padding around the link*/
+    border: 1px solid white;/*border around links*/
+    position: relative;/*sets postion to relative*/
+}
+
+/*for the backgound animation of links on hover*/
+.main-text a::before{
+    content: '';/*pseudo element*/
+    position: absolute;/*sets the postion to absolute*/
+    top: 0;/*postion the pseudo element*/
+    left: 0;/*fpostion of pseudo element in left*/
+    background-color: palevioletred;/*background color of the element*/
+    width: 100%;/*adjust width*/
+    height: 100%;/*height of the element*/
+    z-index: -1;/*puts the element behind text*/
+    transform: scaleX(0);/*initial transform to scale */
+    transition: .2s ease-out;/*transtion effect*/
+}
+
+/* for background animation of links on hover */
+.main-text a:hover:before{
+   transform: scaleX(1);/*scales the pseudo element horizontally to 1 on hover*/
+}
+
+/* its for the smaller screen to make it responsive */
+@media screen and (max-width: 600px) {
+    .main-text {
+        width: 90%; /*reduces the width of the main text*/
+    }
+
+    .main-text h1 {
+        font-size: 32px;/*reduce the font size of the heading*/
+    }
+    .main-text p {
+        font-size: 16px;/*reduce the font size of the paragraph*/
+    }
+}
+
+.form {
+    text-align: center; /*centers the content within the form*/
+    padding: 16px;/*padding of the forms*/
+    
+}
+
+#contact form {
+    max-width: 500px; /*sets the maximum width of the item*/
+    margin: 32px auto;/*centers the contact form horizonatally*/
+    display: flex;/*displays the form as a flex container*/
+    flex-direction: column;/*sets the flex direcion to column*/
+}
+
+#contact form input {
+    height: 40px;/*sets the height of the insput fields*/
+    padding: 5px 10px;/*padding in input fields*/
+    outline: none;/*removes the outline*/
+    margin-bottom: 5px;/*add some margin below each input*/
+}
+#contact form textarea {
+    padding: 5px 10px;/*padding within the textarea*/
+    outline: none;/*remove the outline*/
+}
+#contact form input:focus, #contact form textarea:focus {
+    outline: 1px solid purple;/*sets an outline on focus for input and textarea*/
+}
+
+#contact form button {
+    background-color: palevioletred; /*background color of the button*/
+    height: 40px;/*height of the btn*/
+    border-radius: 10px;/*border radius for rounded corners*/
+    color: white;/*text color of the button*/
+    cursor: pointer;/*sets the cursor to pointer on hover*/
+    border: none;/*removes the button border*/
+    margin: 5px 0;/*adds some margin above and below the btn*/
+    transition: .2s ease-in-out;/*transition effect*/
+}
+
+#contact form button:hover {
+    background-color: rgb(214, 75, 121);/*background color of hover*/
+}

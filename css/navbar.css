@@ -1,0 +1,107 @@
+nav {
+    height: 70px; /*height of the navigation bar*/
+    display: flex; /*displays the navigation bar as a flex content*/
+    align-items: center;/*centers theitems vertically within the navigation bar*/
+    justify-content: space-between; /*distributes the items horizontally with space between*/
+    padding: 0 2rem;/*padding on the left and right of the navigation bar*/
+}
+
+nav .brand {
+    display: flex; /*dsiplays the brand as a flex container*/
+    align-items: center;/*centers the items vertically*/
+}
+
+nav .brand img {
+    height: 50px; /*height of the brand logo*/
+    margin: 0 5px;/*margin around the brand logo*/
+}
+
+nav .brand a {
+    color: white;/*text color of the brand*/
+    text-decoration: none;/*removes underline fromt tghe brand*/
+    font-size: 1.75rem;/*font size of the brand*/
+    font-weight: bold;/*dont weight of the brand*/
+}
+
+nav ul {
+    display: flex; /*displays thge list as a flex container*/
+}
+
+nav ul li {
+    list-style: none;/*removes the default list bullet*/
+    margin: 0 10px;/*margin around each list item*/
+}
+
+nav ul li a {
+    text-decoration: none; /*removes underline from the links*/
+    color: rgb(141, 140, 140);/*text color of the link*/
+    padding: 5px;/*padding around the link*/
+    transition: .3s ease;/*transition effect for the links*/
+    position: relative;/*sets the position to relative*/
+}
+
+nav ul li a:hover {
+    color: white;/*text color of the links on hover*/
+}
+
+nav ul li a::after {
+    content: '';/*empty content for the pseudo element*/
+    width: 100%;/*width of the pseudo element*/
+    height: 3px;/*height of the pseudo element*/
+    background: white;/*background color of the pseudo element*/
+    position: absolute;/*sets the postion to absolute*/
+    bottom: 0;/*position the pseudo element at the bottom*/
+    left: 0;/*position the pseudo element at the left*/
+    transform: scaleX(0);/*initial transform to scale the pseudo element horizontally to 0*/
+    transition: .3s ease-in-out;/*transition effect for the pseudo element*/
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);/*scales tge pseudo eleemnt horizontally to 1 on hover*/
+}
+
+nav .fa{
+    color: white; /*icon color*/
+    font-size: 2rem;/*icon size*/
+    display: none;/*initially hides the icon*/
+}
+
+/* to make the navigation bar responsive */
+@media screen and (max-width:600px) {
+
+    nav .fa {
+        display: block; /*displays the icon*/
+    }
+    nav ul .fa {
+        margin-bottom: 30px; /*adds margin below the icon*/
+    }
+    nav .brand img {
+        height: 40px; /*reduces the height of the brand logo*/
+    }
+    nav .brand a{
+        font-size: 1.2rem; /*reduces the font size*/
+    }
+    nav ul {
+        flex-direction: column;/*changes the direction of the list to vertical*/
+        position: absolute;/*sets the position to absolute*/
+        top: 0;/*position the list at the top*/
+        right: 0;/*position the list at the right*/
+        width: 35%;/*sets the width of the list */
+        padding: 10px;/*padding around the list*/
+        height: 100vh;/*sets the height of the list to fill the viewport*/
+        z-index: 99;/*sets the z-indect to appear on top of other elements*/
+        transform: scaleX(0);/*initianal transform to scale the list horizontally to 0*/
+        transition: .1s ease-in;/*transition effect for the list*/
+        transform-origin: right;/*sets the transform origin to the right*/
+    }
+    nav ul.menu {
+        transform: scaleX(1);/*scales the list horizontally to 1*/
+    }
+    nav ul li {
+        margin: 10px;/*adds margin around each list item*/
+    }
+    nav ul li a{
+        font-size: 1.2rem;/*reduces the font size of the links*/
+        font-weight: bold;/*font weight of the links*/
+    }
+}

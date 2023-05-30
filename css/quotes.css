@@ -1,0 +1,49 @@
+section {
+    background: url(../images/austin-chan-ukzHlkoz1IE-unsplash.jpg) no-repeat;/*background image for the section*/
+    background-size: cover;/*sets the background image to cover the section*/
+    min-height: 100vh;/*sets the minimum height of the section to fill the viewport*/
+}
+
+section > h1 {
+    color: white;/*text color of the heading*/
+    text-align: center;/*senters the heading text*/
+    margin: 16px 0;/*margin around the heading*/
+    font-size: 24px;/*font size of the heading*/
+}
+
+.quotescard {
+    display: flex;/*displays the cards in flex container*/
+    justify-content: space-evenly;/*distributes the card evenly within the container*/
+    flex-wrap: wrap; /*wraps the card to a new line when there is no enough space*/
+}
+
+.card {
+    background-color: white;/*cakground color odf the card*/
+    border-radius: 10px;/*border radius of the card*/
+    text-align: center;/*centers the content*/
+    margin: 16px;/*margin around each card*/
+    width: 350px;/*width of the card*/
+    min-height: 405px;/*minimum height of the card*/
+    padding: 16px 12px;/*padding within the card*/
+    box-shadow: 1px 2px 10px 1px rgb(0, 0, 0);/*box shadow effect for the card*/
+}
+
+.card .list {
+    font-size: 32px;/*font size of the list within the card*/
+}
+
+.card .desc {
+    font-size: 14px;/*font size fo the description in the card*/
+    margin-top: 5px;/*margin at the top of the description*/
+    margin-bottom: 16px;/*margin at the botton of the description*/
+}
+
+.card ul {
+    text-align: left;/*aligns the list item*/
+    padding: 0 16px;/*padding of the list in the card*/
+}
+
+.card ul li {
+    font-size: 14px;/*font size of the list items*/
+    padding-top: 5px;/*padding at the top of each list item*/
+}

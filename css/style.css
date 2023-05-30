@@ -1,0 +1,220 @@
+.home-main {
+    background-image: url(../images/fabian-moller-gI7zgb80QWY-unsplash.jpg); /* set a background img fo the home main section*/
+    background-size: cover; /* scale the background img to cover*/
+    min-height: 100vh; /* set the minimum height of the section to 100% viewport height*/
+}
+
+.main-content {
+    color: white; /* set the text color of the class main content*/
+    position: absolute; /* position the main content absolute*/
+    top: 50%; /*position it 50% top*/
+    left: 50%; /* position it 50% left*/
+    transform: translate(-50%, -50%); /* center the main content using transform*/
+    width: 75%; /* set the width of the main content section*/
+}
+
+.main-content h1 {
+    font-size: 48px; /* set the font size of the heading inside the main content section */
+}
+
+.main-content p {
+    font-size: 19px; /*set the font size of the paragraphs inside main content*/
+    margin: 8px 0; /*add margin to paragraphs*/
+}
+
+.gradient-btn {
+    /* from display to place items, i put them there to make the button show up */
+    display: grid; /* use grid to position the btn*/
+    place-items: center; /* center align the content inside the btn*/
+    text-decoration: none; /*remove the default text decoration of the btn*/
+    color: white; /* set the text color*/
+    background-image: linear-gradient(to right,
+            #874ee9 0%,
+            #966ce3 51%,
+            #691ee9 100%); /*set a gradient background for the btn*/
+    border-radius: 10px; /*add rounded corner to the btn*/
+    background-size: 200% auto; /*set the background size of the button*/
+    transition: .3s ease-in-out; /* add smooth transiton effect*/
+}
+
+.main-content .gradient-btn {
+    width: 200px; /*set the width of the gradient btn*/
+    height: 45px; /*set the ehight of the gradient btn*/
+    margin-top: 24px; /*add top margin to the gradient btn*/
+    text-transform: uppercase; /*convert the btn to uppercase*/
+}
+
+.gradient-btn:hover {
+    background-position: right center; /*change the background postion of the btn hover*/
+}
+
+/* to make the index responsive, this is all for smaller screens */
+@media screen and (max-width:600px) {
+    .main-content h1 {
+        font-size: 36px; /*adjust the font size of the heading*/
+    }
+
+    .main-content p {
+        font-size: 16px; /*adjust the font size of the paragraphs*/
+    }
+
+    .gradient-btn {
+        width: 175px; /*adjust the width of gradient button*/
+        height: 40px;/* adjust height*/
+        font-size: 12px; /*adjust font size*/
+    }
+}
+
+.about {
+    padding: 16px; /*add paddingf to the about section*/
+    text-align: center; /*senter align the content indside the about section*/
+}
+
+.about > h1 {
+    font-size: 48px;  /*set the font size of the heading inside the about section*/
+    margin: 16px 0; /* add top and bottom margin to heading*/
+}
+
+.about-sub {
+    display: flex; /*use flexbox for the about-sub section*/
+    max-width: 800px; /*set the maximum width */
+    margin: 1rem auto; /*add margin to center*/
+    text-align: left; /*align the text to left*/
+}
+
+/*  > is a targeting function, about-sub is targeting img */
+.about-sub>img {
+    max-height: 250px; /*set the maximum height of the img*/
+    width: 300px; /*set the width*/
+    max-width: 90%; /*set the maximum width*/
+    animation: animateimage 1s linear; /*apply an animation to the img*/
+}
+
+/* to make the image transition pop up */
+@keyframes animateimage {
+    from {
+        transform: translateY(-15px); /* move the img up by 15 pixels*/ 
+        opacity: 0.5; /*set the initial quality of th img*/
+    }
+
+    to {
+        transform: translateY(0); /*reset the position of the img*/
+        opacity: 1; /*set the final opacity of the img*/
+    }
+}
+
+.about-sub .sub-sub-about {
+    padding: 16px; /*add padding to the sub*/
+    animation: animatetext 1s linear; /*applu an animation*/
+}
+
+/* animation keyframes for text */
+@keyframes animatetext {
+    from {
+        transform: translateY(-15px); /*move the sub-sub-about section up by 15 pixels*/
+        opacity: 0.5; /*set the initial opacity*/
+    }
+
+    to {
+        transform: translateY(0); /*reset the position*/
+        opacity: 1; /*set the final opacity*/
+    }
+}
+
+.about-sub .sub-sub-about p {
+    font-size: 20px; /*set the font size of the paragraphs inside sub-sub-about*/
+}
+
+.about-sub .gradient-btn {
+    width: 100px; /*set the width of the gradient btn*/
+    margin-top: 5px;/*add top margin to the gradient btn*/
+    height: 30px;/*set the height of the gradient btn*/
+    font-size: 12px;/*set the font size of the gradient btn*/
+}
+
+/* for the page responsiveness */
+/* for all the smaller screens */
+@media screen and (max-width:600px) {
+    .about-sub {
+        flex-direction: column; /*change the direction odthe flex items to column*/
+    }
+
+    /* i use last child class to display it horizontally */
+    .about-sub:last-child {
+        flex-direction: column-reverse; /*reverse the order of the flex items for the last child*/
+    }
+}
+
+.about-trusted {
+    max-width: 800px; /*set the maximum width of the about trusted*/
+    width: 90%; /*set the width*/
+    background-color: #f1f1f1; /*set the background color*/
+    padding: 16px 8px;/*add padding*/
+    margin: 16px auto; /*add margin to center horizontally*/
+}
+
+.about-trusted h1 {
+    font-size: 32px; /*set the font size of the heading*/
+    color: #444;/*set the text color of h1*/
+    text-transform: uppercase;/*transform the tect of the heading to uppercase*/
+    margin-bottom: 16px; /*add botton margin*/
+}
+
+.about-trusted h1 span {
+    color: #000; /*set the text color of the span element inside h1*/
+}
+
+.about-trusted .trusted-logos {
+    display: flex; /*use flexbox for the trusted logos section*/
+    justify-content: space-around;/*distribute the logos evenly with space around*/
+    color: #807f7f;/*set the text color of the logo*/
+    font-size: 32px;/*set the font size of logo*/
+    transition: .3s ease-in;/*add transition effect*/
+    max-width: 75%;/*set the maximum width of the trusted-logo*/
+    margin: 0px auto;/*add margin to center horizontally*/
+}
+
+.about-trusted .trusted-logos .fa:hover {
+    color: #3c3c3c; /*set the text color of the logo on hover*/
+}
+
+/* all media queary is for smaller screens */
+@media screen and (max-width:750px) {
+    .about-trusted h1 {
+        font-size: 24px; /*set a different font size for h1*/
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-trusted h1 {
+        font-size: 18px;/*adjust the font size for h1*/
+    }
+    .about-trusted .trusted-logos {
+        font-size: 16px; /*different font size for logo*/
+    }
+}
+
+.download {
+    text-align: center; /*align the text inside the download section*/
+    padding: 48px 32px 32px 32px;/*add padding do this section*/
+
+}
+
+.download-box {
+    padding: 10px; /*add padding to this section*/
+}
+
+.download-box input {
+    max-width: 300px;/*sset the maximum width*/
+    width: 65%;/*set the width*/
+    padding: 5px 10px;/*add padding*/
+    height: 40px;/*set the height*/
+}
+
+.download-box button {
+    border: none;/*remove the border*/
+    background-color: #966ce3;/*set the background color*/
+    height: 40px;/*set the height of the btn*/
+    padding: 0 16px;/*add padding to the btn*/
+    color: white;/*set the text color of the btn*/
+}

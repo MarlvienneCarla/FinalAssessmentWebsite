@@ -1,0 +1,65 @@
+section {
+    min-height: 100vh; /* Set the minimum height of the section to 100% of the viewport height*/
+    background: url(../images/clay-banks-pNEmlb1CMZM-unsplash.jpg); /*background image for the whole section*/
+    background-size: cover; /* the scale of the background image to cover the whole section*/
+}
+
+.login {
+    position: absolute;  /*for the log in element to position it absolutely*/
+    top: 50%; /* position it 50% from the top of the element*/
+    left: 50%; /* same as the top, position it 50% from the top of the element*/
+    transform: translate(-50%, -50%); /* to center the login element*/
+    background: rgba(255, 255, 255, 0.5); /* set a semi transparent white background*/
+    width: 340px; /*the width of the login element*/
+    backdrop-filter: blur(5px); /*blur effect to the background*/
+    border-radius: 5px; /* add rounded corners to the login element*/
+    padding: 10px; /* add padding to the login element*/
+}
+
+.login h1 {
+    font-size: 40px; /*set the font size of the heading inside the login element*/
+    text-align: center; /* center align the heading text*/
+}
+
+.login form {
+    margin-top: 16px; /* add top margin to the log in form*/
+}
+
+.login .item {
+    display: flex; /* use flexbox for the login item*/
+    flex-direction: column; /* set the flex direction to column*/
+    margin: 10px 0; /*add margin to align it properly*/
+}
+
+/* nth child is based on their position of a parent element */
+.login .item:nth-child(3) {
+    align-items: center; /* center align the items inside tge 3rd login item*/
+    flex-direction: row; /* change the flex direction of the third login item to row*/
+}
+
+.login .item:nth-child(3) label {
+    margin-left: 5px ; /* add left margin to the label inside the third login item*/
+}
+
+.login .item input {
+    height: 45px; /* set the height of the input element inside login item*/
+    padding: 5px 10px; /* add padding to the input element*/
+    background: transparent; /* set transparent background for the input*/
+    outline: none; /* remove the outline*/
+    border: 1px solid purple; /* add a border color of your choice*/
+}
+
+.login form button {
+    background-color: rgb(253, 34, 253); /* set the background color of the button*/
+    color: black;/*set the text color of the btn*/
+    width: 100%; /* set  the width of the btn to 100%*/
+    height: 40px; /* set the height of the button*/
+    border: none; /*remove th border*/
+    outline: none;/*remove the outline*/
+    cursor: pointer;/*change the cursor to a pointer*/
+    transition: .2 ease-in-out; /* add smootg transition effect*/
+}
+
+.login form button:hover {
+    background-color: rgb(211, 32, 211); /*change the background color of the btn hover*/
+}
